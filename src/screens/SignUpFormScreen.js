@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { View, TextInput, StyleSheet, ImageBackground, Text, TouchableOpacity } from 'react-native';
 import ModalDropdown from 'react-native-modal-dropdown';
 import backimage from '../../src/img/newbg.png';
@@ -73,7 +73,7 @@ const SignUpFormScreen = ({navigation}) => {
                     autoCorrect={false}
                     style={styles.emailTextInput}
                     label='email'
-                    placeholder='email'
+                    placeholder='Email'
                     placeholderTextColor='black'
                     keyboardAppearance='dark'
                     keyboardType='email-address'
@@ -98,23 +98,7 @@ const SignUpFormScreen = ({navigation}) => {
                 />
             </View>
 
-            {/* <View style={styles.passwordTextInputPosition}>
-                <TextInput
-                    value={password}
-                    onChangeText = {setPassword}
-                    autoCapitalize='none'
-                    autoCorrect={false}
-                    style={styles.passwordTextInput}
-                    label='password'
-                    placeholder='password'
-                    placeholderTextColor='black'
-                    keyboardAppearance='dark'
-                    keyboardType='default'
-                    returnKeyType='done'
-                    clearTextOnFocus={true}
-                    secureTextEntry={true}
-                />
-            </View> */}
+            
 
             {state.errorMessage ? <Text style={styles.errorMessage}>{state.errorMessage}</Text> : null}
 
@@ -194,7 +178,7 @@ const SignUpFormScreen = ({navigation}) => {
                 </View>
                 <View style={styles.forgotPasswordPosition}>
                         <View style={styles.forgotPassword}>
-                            <Text style={styles.forgotPasswordText}>I am interested in earning money by becoming an ambassador and would like to be sent more information on this.</Text>
+                            <Text style={styles.forgotPasswordText2}>I am interested in earning money by becoming an ambassador and would like to be sent more information on this.</Text>
                         </View>
                 </View>
 
@@ -423,6 +407,12 @@ const styles = StyleSheet.create({
     },
     forgotPasswordText: {
         width: 270,
+        textAlign: 'center',
+        fontSize: 10,
+    },
+    forgotPasswordText2: {
+        width: 270,
+        fontWeight: '800',
         textAlign: 'center',
         fontSize: 10,
     },

@@ -9,7 +9,6 @@ import ReactNativeSnapCarousel from '../../components/ReactNativeSnapCarousel/Re
 import { Context as AuthContext } from '../../context/AuthContext';
 
 import OverlayProfile from 'react-native-modal-overlay';
-import OverlayStart from 'react-native-modal-overlay';
 
 const deviceDisplayWidth = Dimensions.get('window').width;
 
@@ -169,43 +168,6 @@ const DealsScreen = ({}) => {
             <Header />
 
             <ReactNativeSnapCarousel />
-
-            <OverlayStart
-
-            containerStyle={ styles.containerStyleDealCard }
-            visible={ overlayStart }
-            onClose={ () => setOverlayStart(false)}
-            closeOnTouchOutside
-            childrenWrapperStyle={ styles.childrenWrapperStyleDealCard }
-            animationType={'zoomIn'}
-            animationOutType={'zoomOut'}
-
-        >
-
-            <View>
-
-            <View style={styles.epicDealsText1Position}>
-                <Text style={styles.epicDealsText}>Thanks, and welcome!</Text>
-            </View>
-            <View style={styles.epicDealsText2Position}>
-                <Text style={styles.epicDealsText}>you can now start claiming</Text>
-            </View>
-            <View style={styles.epicDealsText2Position}>
-                <Text style={styles.epicDealsText}>deals!</Text>
-            </View>
-            <View style={styles.epicDealsText2Position}>
-                <Text style={styles.epicDealsText}>Keep an eye out for</Text>
-            </View>
-            <View style={styles.epicDealsText2Position}>
-                <Text style={styles.epicDealsText}>new ones added weekly!</Text>
-            </View>
-            <View style={styles.epicDealsText2Position}>
-                <Text style={styles.epicDealsText}>Love, Overheard</Text>
-            </View>
-                
-            </View>
-
-        </OverlayStart>
 
             {renderOverlayType()}
 
