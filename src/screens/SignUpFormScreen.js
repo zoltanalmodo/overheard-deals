@@ -40,7 +40,7 @@ const SignUpFormScreen = ({navigation}) => {
                     autoCorrect={false}
                     style={styles.nameTextInput}
                     label='Name'
-                    placeholder='Name'
+                    placeholder='First Name'
                     placeholderTextColor='black'
                     keyboardAppearance='dark'
                     keyboardType='default'
